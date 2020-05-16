@@ -20,7 +20,7 @@ $(DYNAMIC_LIB): $(OBJS)
 	$(CC) -shared -o $@ $^ $(LDLIBS)
 
 $(STATIC_LIB): $(OBJS)
-	$(AR) -r -o $@ $^
+	$(AR) -r $@ $^
 
 $(SRCS:.c=.d):%.d:%.c
 	$(CC) $(CFLAGS) -MM $< -MT $(patsubst %.d,%.o,$@) > $@
