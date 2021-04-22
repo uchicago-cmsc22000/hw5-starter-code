@@ -1,6 +1,6 @@
 # Makefile based on template at https://gist.github.com/xuhdev/1873316
 
-CC = clang
+CC = gcc
 CFLAGS = -fPIC -Wall -Wextra -O2 -g -I../include/
 DYN_LDFLAGS = -L../ -Wl,-rpath,.
 STC_LDFLAGS = -L../
